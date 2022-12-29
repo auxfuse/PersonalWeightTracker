@@ -1,5 +1,40 @@
+/* Imports */
+@font-face {
+    font-family: 'SHRIMP';
+    src:
+        url('../fonts/SHRIMP.ttf') format('woff2'),
+        url('../fonts/SHRIMP.ttf') format('woff'),
+        url('../fonts/SHRIMP.ttf') format('truetype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/* Globals */
+
+:root {
+    /* Fonts */
+    --primary-font: 'SHRIMP', sans-serif;
+    --secondary-font: 'Montserrat', sans-serif;
+    /* Color Scheme */
+    
+    /* Utility */
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: #112233;
     color: #ffffee;
+    font-family: var(--primary-font);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
