@@ -16,6 +16,8 @@
     --primary-font: 'SHRIMP', sans-serif;
     --secondary-font: 'Montserrat', sans-serif;
     /* Color Scheme */
+    --p-color: #3EC08D;
+    --s-color: #1D1D35;
     
     /* Utility */
 
@@ -28,8 +30,8 @@
 }
 
 body {
-    background-color: #112233;
-    color: #ffffee;
+    background-color: var(--s-color);
+    color: var(--p-color);
     font-family: var(--primary-font);
     min-height: 100vh;
     display: flex;
