@@ -1,7 +1,10 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
-import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
+import { getFirestore, collection, getDocs, setDoc } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js";
+
+// variables
+let resultContainer = document.getElementById('result');
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -24,10 +27,18 @@ const analytics = getAnalytics(app);
 
 const db = getFirestore(app);
 
-let array = [];
+// let array = [];
 
 const querySnapshot = await getDocs(collection(db, "tracker"));
 querySnapshot.forEach((doc) => {
-  array.push(doc.data());
-  console.log(array);
+
+  console.log(doc.data());
+
+  const elem = document.createElement('p');
+  elem.textContent = Object.values(doc.data());
+  resultContainer.appendChild(elem);
+  
+  // array.push(doc.data());
 });
+
+// console.log(array);
