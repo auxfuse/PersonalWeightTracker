@@ -32,13 +32,11 @@ const db = getFirestore(app);
 const querySnapshot = await getDocs(collection(db, "tracker"));
 querySnapshot.forEach((doc) => {
 
-  console.log(doc.data());
-
-  const elem = document.createElement('p');
-  elem.textContent = Object.values(doc.data());
-  resultContainer.appendChild(elem);
+  const nMap = {...doc.data()};
+  console.log(nMap.weight);
   
   // array.push(doc.data());
 });
 
 // console.log(array);
+
