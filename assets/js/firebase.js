@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
-import { getFirestore, collection, getDocs, setDoc } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
+import { getFirestore, collection, getDocs, setDoc, addDoc } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js";
 
 // variables
@@ -39,4 +39,18 @@ querySnapshot.forEach((doc) => {
 });
 
 // console.log(array);
+let today = new Date(Date.now());
 
+async function createRecord() {
+  await addDoc(collection(db, "tracker"), {
+    arm: 50,
+    chest: 50,
+    date: today,
+    hips: 50,
+    thigh: 50,
+    waist: 50,
+    weight: 50
+  });
+};
+
+// createRecord();
