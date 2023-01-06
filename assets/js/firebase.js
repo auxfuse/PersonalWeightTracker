@@ -41,7 +41,7 @@ querySnapshot.forEach((doc) => {
 
   const nMap = {...doc.data()};
   console.log(nMap.weight);
-  
+  console.log("heyo");
   // array.push(doc.data());
 });
 
