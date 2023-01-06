@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets//images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
 
     <link rel="stylesheet" href="assets/css/style.css">
     <title>🧡Waifu's Weight Tracker🧡</title>
@@ -20,7 +24,28 @@
     <div id="result"></div>
 
     <div class="container">
-        <button type="submit">Enter Weight</button>
+        <form action="" id="form">
+            <label for="weight-measurement">Weight:
+                <input class="form-field" id="weight-measurement" type="number" inputmode="numeric" pattern="[0-9]+" required />
+            </label>
+            <label for="arm-measurement">Arm:
+                <input class="form-field" id="arm-measurement" type="number" inputmode="numeric" pattern="[0-9]+" required />
+            </label>
+            <label for="chest-measurement">Chest:
+                <input class="form-field" id="chest-measurement" type="number" inputmode="numeric" pattern="[0-9]+" required />
+            </label>
+            <label for="waist-measurement">Waist:
+                <input class="form-field" id="waist-measurement" type="number" inputmode="numeric" pattern="[0-9]+" required />
+            </label>
+            <label for="hips-measurement">Hips:
+                <input class="form-field" id="hips-measurement" type="number" inputmode="numeric" pattern="[0-9]+" required />
+            </label>
+            <label for="thigh-measurement">Thigh:
+                <input class="form-field" id="thigh-measurement" type="number" inputmode="numeric" pattern="[0-9]+" required />
+            </label>
+
+            <input type="submit" value="Enter Measurements">
+        </form>
     </div>
 
     <script src="assets/js/firebase.js" type="module"/>

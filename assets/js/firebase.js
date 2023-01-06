@@ -5,6 +5,7 @@ import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.15.0/firebase
 
 // variables
 let resultContainer = document.getElementById('result');
+let form = document.getElementById('form');
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -26,6 +27,12 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
 const db = getFirestore(app);
+
+form.addEventListener("submit", (e) => {
+  console.log("test");
+
+  e.preventDefault();
+});
 
 // let array = [];
 
